@@ -1,0 +1,6 @@
+{
+  "name": "Memora AI",
+  "description": "Smart conversational calendar assistant that optimizes daily schedules, predicts completion times with machine learning, and sends reminders.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

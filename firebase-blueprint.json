@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account containing all localized calendar, session history, and preferences.",
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "array",
+          "description": "Array of user tasks"
+        },
+        "preferences": {
+          "type": "array",
+          "description": "Array of scheduling preferences"
+        },
+        "isFocusMode": {
+          "type": "boolean",
+          "description": "Whether focus mode is enabled"
+        },
+        "sessions": {
+          "type": "array",
+          "description": "List of chat sessions and history"
+        },
+        "predictedCount": {
+          "type": "number",
+          "description": "ML task duration predictions run counter"
+        },
+        "exemplars": {
+          "type": "array",
+          "description": "Few-shot user training exemplars for task time prediction"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp"
+        }
+      },
+      "required": ["tasks", "preferences", "isFocusMode", "sessions", "predictedCount", "exemplars", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User documents containing all application states."
+    }
+  }
+}
